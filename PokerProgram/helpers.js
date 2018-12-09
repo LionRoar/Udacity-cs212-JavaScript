@@ -83,14 +83,6 @@ function shuffle(array) {
     return result;
 }
 
-function combinations(list , n){
-    let result = [];
-    combinationsHelper(list , n , [],result);
-}
-
-function combinationsHelper(list , n , ){
-
-}
 
 module.exports.array = {
     max,

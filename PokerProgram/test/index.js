@@ -14,13 +14,11 @@ const quiz = require("./quiz.test");
 const { testDeal, handPercentage } = quiz;
 
 function test(tests = ["poker", "quiz"]) {
-  for (_t of tests){
+  for (_t of tests) {
     let t = _t.toLowerCase();
-    if(!test[t])
-        throw new TypeError(`The Test ${_t} doesn't exists.`);
+    if (!test[t]) throw new TypeError(`The Test ${_t} doesn't exists.`);
     test[t].call();
-   }
-
+  }
 }
 test.poker = function TEST_Poker() {
   console.log(testCardRank());
@@ -35,14 +33,16 @@ test.poker = function TEST_Poker() {
 
 test.quiz = function TEST_Quiz() {
   console.log(testDeal());
-  console.log("Exhaustive test may take some while! Ctrl+C or CMD+C to terminate.");
+  console.log(
+    "Exhaustive test may take some while! Ctrl+C or CMD+C to terminate."
+  );
   handPercentage();
 };
 
 let [node, path, ...args] = process.argv;
 args = args.length === 0 ? undefined : args;
-try{
-test(args);
-}catch(err){
-    console.log(err.name + ': ' + err.message);
+try {
+  test(args);
+} catch (err) {
+  console.log(err.name + ": " + err.message);
 }
