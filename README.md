@@ -1,4 +1,23 @@
-# Lessons Learned
+
+# 1. POKER PROGRAM
+
+to run all tests:
+
+`$ cd PokerProgram`
+
+`$ node test`
+
+to run specific test **poker test** or **quiz test**
+
+`$ cd PokerProgram`
+
+`$ node test poker`  
+
+or  
+
+`$ node test quiz`
+
+## Lessons Learned
 
 - To be a good programmer you must be a good tester.
 
@@ -15,3 +34,5 @@
     1. efficiency.
     1. elegance.
     1. features.
+
+---
